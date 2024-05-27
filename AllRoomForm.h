@@ -304,13 +304,19 @@ namespace Fuck {
 
 	}
 	private: System::Void b_Mydata_Click(System::Object^ sender, System::EventArgs^ e) {
+		System::Diagnostics::Debug::WriteLine("id:" + Id);
+		if (Id != 0)
+		{
+			flag = 1;
+		}
 		MydataForm^ frmMydata = gcnew MydataForm();
 		if (flag == 0) {
 			MessageBox::Show("ログインしてください");
+			System::Diagnostics::Debug::WriteLine("フラグ：" + flag);
 		}
 		else if (flag == 1) {
-			this->Close();
 			frmMydata->ShowDialog();
+			
 		}
 	}
 	private: System::Void b_Logout_Click(System::Object^ sender, System::EventArgs^ e) {

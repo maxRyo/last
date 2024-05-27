@@ -277,16 +277,13 @@ namespace Fuck {
 	}
 	private: System::Void b_AllRoom_Click(System::Object^ sender, System::EventArgs^ e) {
 		//非会員フラグを設定
-		flag = 1;
-		flag = !flag;	//フラグを反転させる
-		if (!flag) {
+		flag = 0;	
 			//ログイン画面を非表示
-			this->Visible = false;
+
 
 			//AllRoomFormを表示
 			AllRoomForm^ allroomform = gcnew AllRoomForm();
 			allroomform->ShowDialog();
-		}
 	}
 	private: System::Void b_Login_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -304,9 +301,10 @@ namespace Fuck {
 		}
 
 
-		flag = 1;
 		AllRoomForm^ frmAll = gcnew AllRoomForm();
+		flag = 1;
 		frmAll->ShowDialog();
+		System::Diagnostics::Debug::WriteLine("フラグ：" + flag);
 
 
 

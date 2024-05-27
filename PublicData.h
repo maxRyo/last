@@ -6,8 +6,8 @@ static int StartMin;
 static int EndHour;
 static int EndMin;
 static int Num;
-static int Id;
-static int flag;
+static int Id = 1;
+static int flag ;
 namespace Fuck{
 	using namespace System;
 	ref class PublicData

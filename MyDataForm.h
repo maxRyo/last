@@ -286,6 +286,8 @@ namespace Fuck {
 						PublicData::Room6Array[i, 5]);
 				}
 			}
+			this->l_Namedata->Text = PublicData::Id;
+			this->l_Namedata->Text = PublicData::PassWord;
 		}
 	private: System::Void b_MydataReturn_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
